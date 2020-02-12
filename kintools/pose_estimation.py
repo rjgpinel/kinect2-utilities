@@ -40,9 +40,9 @@ def pose_estimation(im, mtx, dist):
 
 
 @click.command()
-@click.argument("path")
 @click.argument("camera_parameters")
-def main(path, camera_parameters):
+@click.argument("path")
+def main(camera_parameters, path):
     params = pkl.load(open(camera_parameters, "rb"))
     camera_matrix = params["camera_matrix"]
     dist_coeffs = params["dist_coeffs"]
