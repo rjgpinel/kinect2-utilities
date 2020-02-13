@@ -18,7 +18,7 @@ python -m kintools.pose_estimation cam_params.pkl path_to_image
 
 Convert depth image from kinect2 to point cloud:
 ```
-python -m kintools.process -i depth/depth.npy -o cloud/res.npy
+python -m kintools.reconstruct -i depth/depth.npy -o cloud/res.npy
 ```
 
 Display point cloud:
