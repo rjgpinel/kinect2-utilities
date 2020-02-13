@@ -161,7 +161,9 @@ def main(path_images):
         all_corners, all_ids, imsize, board
     )
     params = {"camera_matrix": camera_matrix, "dist_coeffs": dist_coeffs}
-    pkl.dump(params, open("cam_params.pkl", "wb"))
+    params_file = "cam_params.pkl"
+    pkl.dump(params, open(params_file, "wb"))
+    print("Saved the camera parameters in {}".format(params_file))
     show_correction(images[0], camera_matrix, dist_coeffs)
 
 
