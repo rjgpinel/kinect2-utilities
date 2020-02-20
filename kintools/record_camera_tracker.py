@@ -1,6 +1,7 @@
 import numpy as np
-import matplotlib.pyplot as plt
+import os
 import pickle as pkl
+import matplotlib.pyplot as plt
 
 from kintools.tracker import VR
 from kintools.kinect2 import Kinect2
@@ -9,10 +10,9 @@ from kintools.kinect2 import Kinect2
 camera = Kinect2()
 vr = VR()
 tracker = vr.track_devices()[0]
-save_dir = "snapshots"
+savedir = "snapshots"
 
 print("Recording....")
-geo_snapshots = []
 idx = 0
 while True:
     pose = tracker.get_pose()
