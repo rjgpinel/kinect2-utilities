@@ -10,7 +10,7 @@ def main(filename):
     # C = [[0, 1, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1]]
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(pts[:, :3])
-    pcd.colors = o3d.utility.Vector3dVector(pts[:, 3:] / 255)
+    # pcd.colors = o3d.utility.Vector3dVector(pts[:, 3:] / 255)
     # pcd.transform(C)
     o3d.visualization.draw_geometries([pcd])
 
